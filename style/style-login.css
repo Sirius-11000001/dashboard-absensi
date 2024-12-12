@@ -1,0 +1,207 @@
+/* form login */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html, body {
+    display: grid;
+    height: 100%;
+    width: 100%;
+    overflow-y: hidden;
+    overflow-x: hidden;
+    place-items: center;
+    background: #f2f2f2;
+    font-family: 'Roboto', sans-serif;
+}
+::selection {
+    background: #4158d0;
+    color: #fff;
+}
+.wrapper {
+    width: 380px;
+    background: #fff;
+    border-radius: 25px;
+    box-shadow: 0px 15px 20pc rgba(0, 0, 0, 0.1);
+    margin-left: 45%;
+    animation: shade 2s ease;
+}
+@keyframes shade {
+    0% {
+        opacity: 0;
+        transform: translateX(-200px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+.wrapper .title {
+    font-size: 35px;
+    font-weight: 600;
+    text-align: center;
+    line-height: 100px;
+    color: #fff;
+    user-select: none;
+    border-radius: 15px 15px 0px 0px;
+    box-shadow: inset 0px 5px 5px rgba(255, 255, 255, 0.5);
+    background: linear-gradient(to left, #2427db, #8030d6,#845ef7, #5c7cfa, #339af0);
+}
+.wrapper form {
+    padding: 10px 30px 50px 30px;
+}
+.wrapper form .field {
+    width: 100%;
+    height: 50px;
+    margin-top: 20px;
+    position: relative;
+}
+.wrapper form .field input {
+    width: 100%;
+    height: 100%;
+    outline: none;
+    font-size: 17px;
+    padding-left: 20px;
+    border: 1px solid lightgrey;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+}
+.wrapper form .field input:focus, 
+form .field input:valid {
+    border-color: #4158d0;
+}
+.wrapper form .field label {
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    color: #999999;
+    font-weight: 400;
+    font-size: 17px;
+    pointer-events: none;
+    transform: translateY(-50%);
+    transition: all 0.3s ease;
+}
+form .field input:focus ~ label, 
+form .field input:valid ~ label {
+    top: 0%;
+    font-size: 16px;
+    color: #4158d0;
+    background: #fff;
+    transform: translateY(-50%);
+}
+.wrapper form .pass-link {
+    color: #4158d0;
+    margin: 8px 0 0 10px;
+}
+.wrapper form .field input[type="submit"] {
+    background: linear-gradient(-135deg, #c850, #4158d0)!important;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 700;
+    border: none;
+    padding-left: 0px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    /* text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.7); */
+}
+.wrapper form .field input[type="submit"]:active {
+    transform: scale(0.85);
+}
+.wrapper form .pass-link,
+.wrapper form .signup-link {
+    color: #4158d0;    
+    margin: 8px 0 0 10px;
+}
+.wrapper form .signup-link {
+    color: #262626;
+    text-align: center;
+    margin-top: 20px;
+}
+.wrapper form .pass-link a, 
+.wrapper form .signup-link a {
+    color: #4158d0;    
+    text-decoration: none;
+}
+#show-password {
+    width: 20px;
+    height: 20px;
+    margin-left: 5px;
+}
+
+
+
+/* main-login */
+.main-login::before {
+    background-image: url(http://localhost/dashboard-absensi/assets/media/admin.png);
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    width: 620px;
+    height: 600px;
+    margin-left: 26.5%;
+    top: 0;
+    left: 0;
+    content: '';
+    filter: ();
+    z-index: -1;
+    animation: fade 4s ease;
+}
+@keyframes fade {
+    0% {
+        opacity: 0;
+        transform: translateY(300px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.main-login {
+    position: fixed;
+    text-align: center;
+    margin-right: 50%;
+    margin-bottom: 30%;
+    min-width: 100%;
+}
+.main-login h3 {
+    display: inline-block;
+    opacity: 0;
+    font-size: 3rem;
+    font-weight: 700;
+    background: linear-gradient(45deg, #845ef7, #5c7cfa, #339af0, #22b8cf, #20c997);
+    color: transparent;
+    animation: slide 3s ease forwards infinite;
+    -webkit-background-clip: text;
+}
+@keyframes slide {
+    0% {
+        transform: translateX(130px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+.main-login h3:nth-child(2) {
+    animation-delay: 0.5s;
+}
+.main-login h3:nth-child(1) {
+    animation-delay: 0.5s;
+}
+
+
+
+/* Media Query */
+/* Handphone */
+@media (max-width: 768px) {
+    .main-login::before {
+        display: none;
+    }
+    .main-login {
+        display: none;
+    }
+    .wrapper {
+        margin-right: 40%;
+    }
+}

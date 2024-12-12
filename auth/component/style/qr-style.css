@@ -1,0 +1,190 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;   
+}
+body {
+    letter-spacing: 1px;
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(to left, #F1FAFF, #CBE4FF, #F1FAFF);
+}
+/* header */
+.header-dashboard {
+  padding: 25px;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+  background: linear-gradient(#F1FAFF, #CBE4FF);
+  box-shadow: 5px 0 20px rgba(0, 0, 0, 0.5);
+  animation: header 2s ease-out;
+  z-index: -1;
+}
+@keyframes header {
+  0% {
+    transform: translateY(-50px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+.header-dashboard span {
+  float: right;
+  margin-right: 20px;
+  margin-top: -10px;
+}
+footer {
+  background-color: black;
+  padding: 20px;
+  text-align: center;
+}
+footer span {
+  color: white;
+}
+.current-time {
+  float: right;
+  margin-top: -15px;
+  font-size: 1.5rem;
+  font-weight: 600;
+  text-shadow: 0 0 5px rgba(255, 255, 255, 1);
+}
+
+
+
+
+
+/* tabel */
+.row {
+    margin: 20px;
+    padding: 1rem;
+}
+.card {
+  overflow: hidden;
+  border-radius: 30px;
+  border-collapse: collapse;
+  /* border: 3px solid white; */
+  border-color: white;
+  border-inline-color: 3px solid white;
+  background: linear-gradient(#F1FAFF, #CBE4FF);
+  box-shadow: inset 15px 15px 15px rgba(255, 255, 255, 0.7), 15px 15px 5px rgba(0, 0, 0, 0.2), 10px 0 5px 0 rgba(255, 255, 255, 0.7);
+}
+.data-table {
+  margin-top: 20px;
+}
+.btn-view {
+  background-color: #17a2b8;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  transition: all 1s ease;
+  box-shadow: inset 15px 15px 15px rgba(255, 255, 255, 0.7), 3px 3px 3px rgba(0, 0, 0, 0.3), 3px 0 3px 0 rgba(255, 255, 255, 0.7);
+}
+.btn-view:hover {
+  background: rgb(130, 130, 130);
+  text-decoration: none;
+  text-decoration-color: white;
+}
+.card-body thead tr th {  
+  background: linear-gradient(to right, #F1FAFF, #CBE4FF, #F1FAFF);
+}
+.card-body thead {  
+  background: linear-gradient(to right, #F1FAFF, #17a2b8, #F1FAFF);
+}
+.card .card-header {
+  background: linear-gradient(155deg, #F1FAFF, #17a2b8, #F1FAFF);
+} 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Media Query */
+/* All Device */
+@media (max-width: 1024px) {
+    .sidebar {
+        height: 56px;
+        margin: 13px;
+        overflow-y: hidden;
+        scrollbar-width: none;
+        width: calc(100% - 26px);
+        max-height: calc(100vh - 26px);
+    }
+    .sidebar.menu-active {
+        overflow-y: auto;
+    }
+    .sidebar .sidebar-header {
+        position: sticky;
+        top: 0;
+        z-index: 20;
+        border-radius: 16px;
+        background: #151A2D;
+        padding: 8px 10px;
+    }
+    .sidebar-header .header-logo img {
+        width: 40px;
+        height: 40px;
+    }
+    .sidebar-header .sidebar-toggler,
+    .sidebar-nav .nav-item:hover .nav-tooltip {
+        display: none;
+    }
+    .sidebar-header .menu-toggler {
+        display: flex;
+        height: 30px;
+        width: 30px;
+    }
+    .sidebar-header .menu-toggler span {
+        font-size: 1.3rem;
+    }
+    .sidebar .sidebar-nav .nav-list {
+        padding: 0 10px;
+    }
+    .sidebar-nav .nav-link {
+        gap: 10px;
+        padding: 10px;
+        font-size: 0.94rem;
+    }
+    .sidebar-nav .nav-link .nav-icon {
+        font-size: 1.37rem;
+    }
+    .sidebar-nav .secondary-nav {
+        position: relative;
+        bottom: 0;
+        margin: 40px 0 30px;
+    }
+    .header-dashboard {
+        padding: 60px;
+    }
+    .current-time {
+      margin-top: 20px;
+    }
+    #hero {
+        margin-left: 40px;
+        margin-top: 70px;
+    }
+    .dashboard-info {
+        margin: 40px;
+    }
+    .data-table {
+        margin-left: 0;
+        margin-right: 0;
+    }
+    .btn-view {
+        width: 100%;
+        margin-top: 10px;
+    }
+    .card {
+        margin-bottom: 15px;
+    }
+}
