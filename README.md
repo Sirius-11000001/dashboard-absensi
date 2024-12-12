@@ -51,7 +51,7 @@ Halo teman-teman, perkenalkan saya perwakilan dari kelompok 1.
 Kami disini membuat sebuah aplikasi Absensi QR Code karyawan Berbasis web.
 
 ## Kenapa kami menggunakan 2 web server?
-Karna saya tidak mengerti cara menggunakan Xampp secara benar, jadi saya menggunakan 2 web server, yaitu Xampp dan Flask.
+Karna saya tidak mengerti cara menggunakan Xampp dengan benar, jadi saya menggunakan 2 web server hahahahahaha
 
 ## Apa itu Flask?
 Flask adalah sebuah framework Python yang digunakan untuk membuat aplikasi web. Flask adalah pilihan yang
